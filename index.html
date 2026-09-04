@@ -3,25 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Preservação Ambiental - Desmatamento Zero</title>
+  <title>Preservação Ambiental: O Combate ao Desmatamento</title>
   <style>
     /* VARIÁVEIS DE TEMA */
     :root {
-      --bg-color: #f4f9f4;
-      --text-color: #1b4332;
+      --bg-color: #f0f7f0;
+      --text-color: #1a4d1a;
       --card-bg: #ffffff;
-      --button-bg: #2d6a4f;
+      --button-bg: #228b22; /* Forest Green */
       --button-text: #ffffff;
-      --shadow: rgba(0, 0, 0, 0.1);
+      --shadow: rgba(0, 0, 0, 0.15);
     }
 
     body.dark-mode {
-      --bg-color: #121212;
-      --text-color: #e0e0e0;
-      --card-bg: #1e1e1e;
-      --button-bg: #52b788;
+      --bg-color: #0d1a0d;
+      --text-color: #d0e0d0;
+      --card-bg: #1a2e1a;
+      --button-bg: #50c878; /* Emerald */
       --button-text: #121212;
-      --shadow: rgba(0, 0, 0, 0.5);
+      --shadow: rgba(0, 0, 0, 0.6);
     }
 
     /* ESTILOS GERAIS */
@@ -30,62 +30,120 @@
       color: var(--text-color);
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      padding: 20px;
-      transition: background-color 0.3s, color 0.3s;
+      padding: 0;
+      transition: background-color 0.4s, color 0.4s;
     }
 
+    /* CABEÇALHO */
     header {
+      background-color: var(--card-bg);
+      padding: 10px 20px;
       display: flex;
       justify-content: flex-end;
-      max-width: 800px;
-      margin: 0 auto 20px auto;
+      align-items: center;
+      box-shadow: 0 2px 5px var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
+    /* CONTEÚDO PRINCIPAL */
     .container {
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: center;
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 0 20px;
+      padding-bottom: 40px;
     }
 
+    h1, h2 {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    p {
+      line-height: 1.8;
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      text-align: justify;
+    }
+
+    /* CARD DA IMAGEM E CURTIDA */
     .card {
       background-color: var(--card-bg);
-      border-radius: 12px;
+      border-radius: 15px;
       overflow: hidden;
-      box-shadow: 0 4px 12px var(--shadow);
-      margin-top: 20px;
-      transition: background-color 0.3s;
+      box-shadow: 0 5px 15px var(--shadow);
+      margin: 30px 0;
+      transition: background-color 0.4s;
     }
 
     .card img {
       width: 100%;
-      height: 350px;
+      height: 400px;
       object-fit: cover;
       display: block;
     }
 
     .card-content {
       padding: 25px;
+      text-align: center;
     }
 
-    /* BOTOES */
+    /* SEÇÃO SOBRE O MEIO AMBIENTE */
+    .info-section {
+      margin-top: 40px;
+    }
+
+    .info-section h2 {
+      margin-top: 10px;
+    }
+
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    /* BOTÕES */
     button {
-      background-color: var(--button-bg);
-      color: var(--button-text);
       border: none;
-      padding: 12px 24px;
       border-radius: 25px;
       cursor: pointer;
       font-size: 16px;
       font-weight: bold;
-      transition: opacity 0.2s, transform 0.1s;
+      transition: all 0.3s ease;
+    }
+
+    #toggle-theme {
+      background-color: var(--button-bg);
+      color: var(--button-text);
+      padding: 10px 20px;
+    }
+
+    #like-btn {
+      background-color: var(--button-bg);
+      color: var(--button-text);
+      padding: 12px 25px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
     }
 
     button:hover {
-      opacity: 0.9;
+      opacity: 0.85;
+      transform: translateY(-2px);
     }
 
     button:active {
-      transform: scale(0.98);
+      transform: translateY(0);
     }
   </style>
 </head>
@@ -96,50 +154,33 @@
   </header>
 
   <main class="container">
-    <h1>Preserve a Nossa Floresta</h1>
-    <p>O desmatamento reduz a biodiversidade, afeta o clima global e compromete o futuro. Ações de conscientização e reflorestamento são urgentes.</p>
+    <h1>A Importância da Preservação: Desmatamento Zero</h1>
+    <p>As florestas tropicais são os "pulmões verdes" da Terra, mas enfrentam uma ameaça constante. O desmatamento, impulsionado por atividades como a expansão agrícola e a exploração madeireira ilegal, está destruindo ecossistemas vitais. Nosso site tem como objetivo educar e inspirar ações para reverter essa crise ambiental.</p>
     
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1511497584788-876761c119ef?auto=format&fit=crop&w=800&q=80" alt="Floresta tropical preservada com árvores altas">
+      <img src="https://images.unsplash.com/photo-1511497584788-876761c119ef?auto=format&fit=crop&w=800&q=80" alt="Vista aérea de uma densa floresta tropical protegida">
       <div class="card-content">
-        <h2>Proteja o Meio Ambiente</h2>
-        <p>Apoie causas ambientais e ajude a espalhar a mensagem contra o desmatamento ilegal.</p>
+        <h2>Proteja o Coração Verde do Planeta</h2>
+        <p>Apoie causas ambientais e ajude a espalhar a mensagem contra o desmatamento ilegal. Sua conscientização é a primeira semente para a mudança.</p>
         <button id="like-btn">❤️ Curtir (<span id="like-count">0</span>)</button>
       </div>
     </div>
-  </main>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // 1. FUNCIONALIDADE DO BOTÃO DE TEMA (CLARO/ESCURO)
-      const toggleThemeBtn = document.getElementById('toggle-theme');
-      
-      toggleThemeBtn.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        
-        if (document.body.classList.contains('dark-mode')) {
-          toggleThemeBtn.textContent = '🌙 Modo Claro';
-        } else {
-          toggleThemeBtn.textContent = '☀️ Modo Escuro';
-        }
-      });
+    <section class="info-section">
+      <h2>O Que Está em Jogo?</h2>
+      <p>A perda de florestas tem consequências diretas e profundas em nosso planeta:</p>
+      <ul>
+        <li><strong>Perda de Biodiversidade:</strong> Milhões de espécies de plantas e animais perdem seu habitat natural, levando ao risco de extinção.</li>
+        <li><strong>Mudanças Climáticas:</strong> Árvores absorvem CO2, um dos principais gases de efeito estufa. Com menos florestas, mais CO2 permanece na atmosfera, acelerando o aquecimento global.</li>
+        <li><strong>Ciclos de Água Alterados:</strong> As florestas regulam o fluxo de água. O desmatamento pode levar a secas em algumas regiões e inundações em outras.</li>
+        <li><strong>Impacto nas Comunidades Indígenas:</strong> Muitos povos dependem diretamente da floresta para sua subsistência, cultura e moradia.</li>
+      </ul>
 
-      // 2. FUNCIONALIDADE DO BOTÃO DE CURTIDA
-      const likeBtn = document.getElementById('like-btn');
-      const likeCount = document.getElementById('like-count');
-      
-      // Recupera o valor salvo no navegador ou inicia em 0
-      let count = parseInt(localStorage.getItem('floresta_likes')) || 0;
-      likeCount.textContent = count;
-
-      likeBtn.addEventListener('click', () => {
-        count++;
-        likeCount.textContent = count;
-        localStorage.setItem('floresta_likes', count);
-      });
-    });
-  </script>
-
-</body>
-</html>
+      <h2>Ações que Transformam</h2>
+      <p>Apesar dos desafios, cada ação conta na luta pela preservação ambiental. Podemos fazer a diferença através de escolhas conscientes e apoio a iniciativas sustentáveis:</p>
+      <ul>
+        <li><strong>Apoie o Consumo Responsável:</strong> Escolha produtos certificados e evite aqueles associados ao desmatamento.</li>
+        <li><strong>Reduza, Reutilize, Recicle:</strong> Diminua sua pegada ecológica reduzindo o desperdício de papel e outros recursos.</li>
+        <li><strong>Plante Árvores:</strong> Participe de iniciativas locais de reflorestamento. Cada muda plantada ajuda a restaurar ecossistemas.</li>
+        <li><strong>Eduque e Conscientize:</strong> Compartilhe informações e engaje outras pessoas na
 

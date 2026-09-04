@@ -1,69 +1,30 @@
-:root {
-  --bg-color: #f4f9f4;
-  --text-color: #1b4332;
-  --card-bg: #ffffff;
-  --button-bg: #2d6a4f;
-  --button-text: #ffffff;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conscientização sobre o Desmatamento</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <button id="toggle-theme">Alternar Tema</button>
+  </header>
 
-body.dark-mode {
-  --bg-color: #121212;
-  --text-color: #e0e0e0;
-  --card-bg: #1e1e1e;
-  --button-bg: #52b788;
-  --button-text: #121212;
-}
+  <main class="container">
+    <h1>Preserve a Nossa Floresta</h1>
+    <p>O desmatamento ameaça a biodiversidade, o clima e o futuro do nosso planeta. A conscientização é o primeiro passo para a mudança.</p>
+    
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1511497584788-876761c119ef?auto=format&fit=crop&w=800&q=80" alt="Floresta preservada">
+      <div class="card-content">
+        <h2>Juntos Pela Natureza</h2>
+        <p>Apoie ações de reflorestamento e combate ao desmatamento ilegal.</p>
+        <button id="like-btn">❤️ Curtir (<span id="like-count">0</span>)</button>
+      </div>
+    </div>
+  </main>
 
-body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-header {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.card {
-  background-color: var(--card-bg);
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  margin-top: 20px;
-}
-
-.card img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-}
-
-.card-content {
-  padding: 20px;
-}
-
-button {
-  background-color: var(--button-bg);
-  color: var(--button-text);
-  border: none;
-  padding: 10px 20px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  transition: opacity 0.2s;
-}
-
-button:hover {
-  opacity: 0.9;
-}
+  <script src="script.js"></script>
+</body>
+</html>
